@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Slider from './Slider'
 import SidebarItem from './SidebarItem'
+import Header from './Header';
 
 const DEFAULT_OPTIONS = [
   {
@@ -101,6 +102,11 @@ function App() {
   console.log(getImageStyle())
 
   return (
+    <>
+    <div class="header">
+        <Header />
+    </div>
+
     <div className="container">
       <div className="main-image" style={getImageStyle()} />
       <div className="sidebar">
@@ -122,6 +128,7 @@ function App() {
         handleChange={handleSliderChange}
       />
     </div>
+    </>
   )
 }
 
